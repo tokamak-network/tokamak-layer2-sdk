@@ -1,6 +1,6 @@
 {
   "name": "@Zena-park/tokamak-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tokamak layer2 sdk",
   "main": "index.js",
   "scripts": {
