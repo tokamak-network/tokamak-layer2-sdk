@@ -1,8 +1,8 @@
 {
   "name": "@Zena-park/tokamak-sdk",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Tokamak layer2 sdk",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "node scripts/cross-dom-bridge-test.js",
     "build": "tsc -p tsconfig.json"
