@@ -1,6 +1,6 @@
 node_modules
 #dist
-
+backup
 .env
 coverage
 coverage.json
