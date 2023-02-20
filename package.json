@@ -1,6 +1,6 @@
 {
   "name": "@Zena-park/tokamak-sdk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Tokamak layer2 sdk",
   "main": "./dist/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/Zena-park/tokamak-sdk.git"
   },
-  "author": "zena.p@onther.io",
+  "author": "zena@tokamak.network",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Zena-park/tokamak-sdk/issues"
