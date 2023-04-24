@@ -165,6 +165,7 @@ export class ETHBridgeAdapter extends StandardBridgeAdapter {
       amount: NumberLike,
       opts?: {
         recipient?: AddressLike
+        data?: string
         overrides?: Overrides
       }
     ): Promise<TransactionRequest> => {
@@ -177,7 +178,7 @@ export class ETHBridgeAdapter extends StandardBridgeAdapter {
           toAddress(l2Token),
           amount,
           0, // L1 gas not required.
-          '0x', // No data.
+          (opts != null?opts.data != null?opts.data:'0x':'0x'), // No data.
           {
             ...omit(opts?.overrides || {}, 'value'),
             value: this.messenger.bedrock ? amount : 0,
@@ -189,7 +190,7 @@ export class ETHBridgeAdapter extends StandardBridgeAdapter {
           toAddress(opts.recipient),
           amount,
           0, // L1 gas not required.
-          '0x', // No data.
+          (opts != null?opts.data != null?opts.data:'0x':'0x'), // No data.
           {
             ...omit(opts?.overrides || {}, 'value'),
             value: this.messenger.bedrock ? amount : 0,

@@ -154,6 +154,7 @@ export interface IBridgeAdapter {
    * @param signer Signer used to sign and send the transaction.
    * @param opts Additional options.
    * @param opts.recipient Optional address to receive the funds on L1. Defaults to sender.
+   * @param opts.data
    * @param opts.overrides Optional transaction overrides.
    * @returns Transaction response for the withdraw transaction.
    */
@@ -164,6 +165,7 @@ export interface IBridgeAdapter {
     signer: Signer,
     opts?: {
       recipient?: AddressLike
+      data?: string
       overrides?: Overrides
     }
   ): Promise<TransactionResponse>
@@ -223,6 +225,7 @@ export interface IBridgeAdapter {
      * @param amount Amount of the token to withdraw.
      * @param opts Additional options.
      * @param opts.recipient Optional address to receive the funds on L1. Defaults to sender.
+     * @param opts.data
      * @param opts.overrides Optional transaction overrides.
      * @returns Transaction that can be signed and executed to withdraw the tokens.
      */
@@ -232,6 +235,7 @@ export interface IBridgeAdapter {
       amount: NumberLike,
       opts?: {
         recipient?: AddressLike
+        data?:string
         overrides?: Overrides
       }
     ): Promise<TransactionRequest>
@@ -292,7 +296,8 @@ export interface IBridgeAdapter {
      * @param amount Amount of the token to withdraw.
      * @param opts Additional options.
      * @param opts.recipient Optional address to receive the funds on L1. Defaults to sender.
-     * @param opts.overrides Optional transaction overrides.
+     * @param opts.data  data.
+    * @param opts.overrides Optional transaction overrides.
      * @returns Gas estimate for the transaction.
      */
     withdraw(
@@ -301,6 +306,7 @@ export interface IBridgeAdapter {
       amount: NumberLike,
       opts?: {
         recipient?: AddressLike
+        data?: string
         overrides?: CallOverrides
       }
     ): Promise<BigNumber>

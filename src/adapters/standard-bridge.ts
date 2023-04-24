@@ -252,6 +252,7 @@ export class StandardBridgeAdapter implements IBridgeAdapter {
     signer: Signer,
     opts?: {
       recipient?: AddressLike
+      data?: string
       overrides?: Overrides
     }
   ): Promise<TransactionResponse> {
@@ -328,6 +329,7 @@ export class StandardBridgeAdapter implements IBridgeAdapter {
       amount: NumberLike,
       opts?: {
         recipient?: AddressLike
+        data?: string
         overrides?: Overrides
       }
     ): Promise<TransactionRequest> => {
@@ -340,7 +342,7 @@ export class StandardBridgeAdapter implements IBridgeAdapter {
           toAddress(l2Token),
           amount,
           0, // L1 gas not required.
-          '0x', // No data.
+          (opts != null?opts.data != null?opts.data:'0x':'0x'), // No data.
           opts?.overrides || {}
         )
       } else {
@@ -349,7 +351,7 @@ export class StandardBridgeAdapter implements IBridgeAdapter {
           toAddress(opts.recipient),
           amount,
           0, // L1 gas not required.
-          '0x', // No data.
+          (opts != null?opts.data != null?opts.data:'0x':'0x'), // No data.
           opts?.overrides || {}
         )
       }
@@ -392,6 +394,7 @@ export class StandardBridgeAdapter implements IBridgeAdapter {
       amount: NumberLike,
       opts?: {
         recipient?: AddressLike
+        data?: string
         overrides?: CallOverrides
       }
     ): Promise<BigNumber> => {

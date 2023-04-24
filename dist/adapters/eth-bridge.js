@@ -113,11 +113,11 @@ var ETHBridgeAdapter = /** @class */ (function (_super) {
                             }
                             if ((opts === null || opts === void 0 ? void 0 : opts.recipient) === undefined) {
                                 return [2 /*return*/, this.l2Bridge.populateTransaction.withdraw((0, utils_1.toAddress)(l2Token), amount, 0, // L1 gas not required.
-                                    '0x', __assign(__assign({}, (0, utils_1.omit)((opts === null || opts === void 0 ? void 0 : opts.overrides) || {}, 'value')), { value: this.messenger.bedrock ? amount : 0 }))];
+                                    (opts != null ? opts.data != null ? opts.data : '0x' : '0x'), __assign(__assign({}, (0, utils_1.omit)((opts === null || opts === void 0 ? void 0 : opts.overrides) || {}, 'value')), { value: this.messenger.bedrock ? amount : 0 }))];
                             }
                             else {
                                 return [2 /*return*/, this.l2Bridge.populateTransaction.withdrawTo((0, utils_1.toAddress)(l2Token), (0, utils_1.toAddress)(opts.recipient), amount, 0, // L1 gas not required.
-                                    '0x', __assign(__assign({}, (0, utils_1.omit)((opts === null || opts === void 0 ? void 0 : opts.overrides) || {}, 'value')), { value: this.messenger.bedrock ? amount : 0 }))];
+                                    (opts != null ? opts.data != null ? opts.data : '0x' : '0x'), __assign(__assign({}, (0, utils_1.omit)((opts === null || opts === void 0 ? void 0 : opts.overrides) || {}, 'value')), { value: this.messenger.bedrock ? amount : 0 }))];
                             }
                             return [2 /*return*/];
                     }
