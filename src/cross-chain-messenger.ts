@@ -605,6 +605,7 @@ export class CrossChainMessenger {
 
       return found
     } else {
+
       // TODO: Explicit TransactionLike check and throw if not TransactionLike
       const messages = await this.getMessagesByTransaction(
         message as TransactionLike
@@ -826,9 +827,9 @@ export class CrossChainMessenger {
       timeoutMs?: number
     } = {}
   ): Promise<void> {
+
     // Resolving once up-front is slightly more efficient.
     const resolved = await this.toCrossChainMessage(message)
-
     let totalTimeMs = 0
     while (totalTimeMs < (opts.timeoutMs || Infinity)) {
       const tick = Date.now()
