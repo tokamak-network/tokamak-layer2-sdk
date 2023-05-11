@@ -1,6 +1,6 @@
 {
-  "name": "@Zena-park/tokamak-sdk",
-  "version": "1.0.4",
+  "name": "@tokamak-network/tokamak-layer2-sdk",
+  "version": "0.0.1",
   "description": "Tokamak layer2 sdk",
   "main": "./dist/index.js",
   "scripts": {
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Zena-park/tokamak-sdk.git"
+    "url": "git+https://github.com/tokamak-network/tokamak-layer2-sdk.git"
   },
   "author": "zena@tokamak.network",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Zena-park/tokamak-sdk/issues"
+    "url": "https://github.com/tokamak-network/tokamak-layer2-sdk/issues"
   },
-  "homepage": "https://github.com/Zena-park/tokamak-sdk#readme",
+  "homepage": "https://github.com/tokamak-network/tokamak-layer2-sdk#readme",
   "dependencies": {
     "@eth-optimism/contracts": "0.5.39",
     "@eth-optimism/contracts-bedrock": "0.11.0",

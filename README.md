@@ -29,5 +29,5 @@ yarn test
 
 make .npmrc file.
 write below contents.
-//npm.pkg.github.com/:_authToken=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
-@zena-park:registry=https://npm.pkg.github.com/
+//npm.pkg.github.com/:_authToken=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
+@tokamak-network:registry=https://npm.pkg.github.com/
