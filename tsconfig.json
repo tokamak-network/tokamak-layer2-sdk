@@ -5,6 +5,7 @@
       "target": "ES5",
       "outDir": "./dist",
       "moduleResolution": "node",
+      "esModuleInterop": true,
       "lib": []
     },
     "include": ["./src/**/*"],
