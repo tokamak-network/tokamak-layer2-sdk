@@ -35,12 +35,15 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.asL2Provider = exports.isL2Provider = exports.estimateTotalGasCost = exports.estimateL2GasCost = exports.estimateL1GasCost = exports.estimateL1Gas = exports.getL1GasPrice = void 0;
 var transactions_1 = require("@ethersproject/transactions");
 var ethers_1 = require("ethers");
 var contracts_1 = require("@eth-optimism/contracts");
-var cloneDeep_1 = require("lodash/cloneDeep");
+var cloneDeep_1 = __importDefault(require("lodash/cloneDeep"));
 var utils_1 = require("./utils");
 /**
  * Gets a reasonable nonce for the transaction.

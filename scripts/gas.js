@@ -49,7 +49,7 @@ let l1Signer, l2Signer;
 const getSigners = async () => {
     // const l1RpcProvider = new ethers.providers.JsonRpcProvider(l1Url)
     // const l2RpcProvider = new ethers.providers.JsonRpcProvider(l2Url)
-    const l1RpcProvider =  new ethers.providers.JsonRpcProvider(l1Url)
+    const l1RpcProvider =  optimismSDK.asL2Provider(new ethers.providers.JsonRpcProvider(l1Url))
     const l2RpcProvider = optimismSDK.asL2Provider(new ethers.providers.JsonRpcProvider(l2Url))
 
     const privateKey = process.env.PRIVATE_KEY

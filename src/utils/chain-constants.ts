@@ -25,6 +25,7 @@ export const DEPOSIT_CONFIRMATION_BLOCKS: {
   [L2ChainID.OPTIMISM_BEDROCK_LOCAL_DEVNET]: 2 as const,
   [L2ChainID.OPTIMISM_BEDROCK_ALPHA_TESTNET]: 12 as const,
   [L2ChainID.TOKAMAK_GOERLI_TESTNET]: 2 as const,
+  [L2ChainID.TITAN]: 2 as const,
 }
 
 export const CHAIN_BLOCK_TIMES: {
@@ -175,6 +176,22 @@ export const CONTRACT_ADDRESSES: {
       CanonicalTransactionChain:
         '0x1D288952363B14B6BEEFA6A5fB2990203963F399' as const,
       BondManager: '0x55c16359C5254Ade092DF94C9B858D4810cB2774' as const,
+      OptimismPortal: '0x0000000000000000000000000000000000000000' as const,
+      L2OutputOracle: '0x0000000000000000000000000000000000000000' as const,
+    },
+    l2: DEFAULT_L2_CONTRACT_ADDRESSES,
+  },
+  [L2ChainID.TITAN]: {
+    l1: {
+      AddressManager: '0xeDf6C92fA72Fa6015B15C9821ada145a16c85571' as const,
+      L1CrossDomainMessenger:
+        '0xfd76ef26315Ea36136dC40Aeafb5D276d37944AE' as const,
+      L1StandardBridge: '0x59aa194798Ba87D26Ba6bEF80B85ec465F4bbcfD' as const,
+      StateCommitmentChain:
+        '0x66b9f45E84A0aD7fE3983c97556798352a8E0a56' as const,
+      CanonicalTransactionChain:
+        '0x4A1941f18874Df01e5CAA1CD3DA4b1803CBD32C2' as const,
+      BondManager: '0xAD4765d7729946cF7c3C7acBE9DC5E220A98e944' as const,
       OptimismPortal: '0x0000000000000000000000000000000000000000' as const,
       L2OutputOracle: '0x0000000000000000000000000000000000000000' as const,
     },

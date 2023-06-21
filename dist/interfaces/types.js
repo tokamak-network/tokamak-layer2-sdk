@@ -25,6 +25,7 @@ var L2ChainID;
     L2ChainID[L2ChainID["OPTIMISM_BEDROCK_LOCAL_DEVNET"] = 901] = "OPTIMISM_BEDROCK_LOCAL_DEVNET";
     L2ChainID[L2ChainID["OPTIMISM_BEDROCK_ALPHA_TESTNET"] = 28528] = "OPTIMISM_BEDROCK_ALPHA_TESTNET";
     L2ChainID[L2ChainID["TOKAMAK_GOERLI_TESTNET"] = 5050] = "TOKAMAK_GOERLI_TESTNET";
+    L2ChainID[L2ChainID["TITAN"] = 55004] = "TITAN";
 })(L2ChainID = exports.L2ChainID || (exports.L2ChainID = {}));
 /**
  * Enum describing the status of a message.
